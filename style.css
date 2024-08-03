@@ -3,6 +3,11 @@
     color: white;
 }
 
+body {
+    display: flex;
+    gap: 1rem;
+}
+
 .hidden {
     display: none;
 }

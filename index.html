@@ -8,19 +8,22 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="menu-container">
-      <label for="About" class="menu-option">About</label>
-      <select name="About" class="dropdown hidden" id="about">
-        <option value="us">Us</option>
-        <option value="ourStuff">Our Stuff</option>
-        <option value="somethingElse">Something Else</option>
-      </select>
-      <label for="Something" class="menu-option">Something</label>
-      <select name="Something" class="dropdown hidden" id="about">
-        <option value="hello">Hello</option>
-        <option value="welcome">Welcome</option>
-        <option value="somethingElse">Something Else</option>
-      </select>
+    <div class="menu-option-container">
+      <button class="dropdown-label">Menu One</button>
+      <div class="dropdown-option-container hidden">
+        <p>Edit</p>
+        <p>Show</p>
+        <p>Delete</p>
+      </div>
+    </div>
+
+    <div class="menu-option-container">
+      <button class="dropdown-label">Menu Two</button>
+      <div class="dropdown-option-container hidden">
+        <p>Something</p>
+        <p>Else</p>
+        <p>Entirely</p>
+      </div>
     </div>
   </body>
 </html>

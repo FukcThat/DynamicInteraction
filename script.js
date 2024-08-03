@@ -1,13 +1,23 @@
 // Drop-down
 
-const MENU = document.querySelector(".menu-container");
-const MENU_OPTION = document.querySelector(".menu-option");
-const DROPDOWN = document.querySelector(".dropdown");
+const CONTAINER = document.querySelectorAll(".menu-option-container");
+const LABEL = document.querySelectorAll(".dropdown-label");
+const DROPDOWN = document.querySelectorAll(".dropdown-option-container");
 
-MENU_OPTION.addEventListener("mouseover", () => {
-  DROPDOWN.classList.remove("hidden");
-});
+const initDropDown = (container, label, dropdown) => {
+  label.addEventListener("mouseover", () => {
+    dropdown.classList.remove("hidden");
+  });
 
-MENU_OPTION.addEventListener("mouseout", () => {
-  DROPDOWN.classList.add("hidden");
-});
+  container.addEventListener("mouseout", () => {
+    dropdown.classList.add("hidden");
+  });
+};
+
+const initMenu = (containerArr, labelArr, dropdownArr) => {
+  for (let i = 0; i < containerArr.length; i++) {
+    initDropDown(containerArr[i], labelArr[i], dropdownArr[i]);
+  }
+};
+
+initMenu(CONTAINER, LABEL, DROPDOWN);
