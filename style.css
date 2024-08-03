@@ -1,0 +1,8 @@
+* {
+    background-color: rgb(40, 35, 35);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
