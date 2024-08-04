@@ -9,7 +9,7 @@ const initDropDown = (container, label, dropdown) => {
     dropdown.classList.remove("hidden");
   });
 
-  container.addEventListener("mouseout", () => {
+  container.addEventListener("mouseleave", () => {
     dropdown.classList.add("hidden");
   });
 };
