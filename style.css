@@ -1,4 +1,4 @@
-* {
+/* body {
     box-sizing: border-box;
     background-color: rgb(40, 35, 35);
     color: white;
@@ -27,6 +27,8 @@
 }
 
 .dropdown-label {
+    background-color: rgb(40, 35, 35);
+    color: white;
     height: 2rem;
     width: 8rem;
     font-size: 1rem;
@@ -44,23 +46,94 @@
 
 .dropdown-link:hover {
     background-color: rgb(184, 139, 124);
-}
+} */
 
 /* Image Carousel  */
 
-.carousel-frame {
-    height: 100dvh;
+body {
+    background-color: rgb(40, 38, 38);
+}
+
+.carousel__section {
+    margin-top: 5rem;
+}
+
+.carousel {
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    transition: transform 250ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.carousel__btn--left {
+    left: -3rem;
+}
+
+.carousel__btn--right {
+    right: -3rem;
+}
+
+.carousel__btn img {
+    width: 2.5rem;
+}
+
+.carousel__nav {
     display: flex;
     justify-content: center;
-    padding-top: 10rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.img-container {
-    position: relative;
-    height: 225px;
-    width: 225px;
-    border: red solid 1px;
-    display: flex;
-    /* overflow: hidden; */
+.carousel__indicator {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 1rem;
+    width: 1rem;
+    border: none;
+    border-radius: 50%;
 }
 
+.carousel__indicator.current-slide {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.hidden {
+    display: none;
+}
